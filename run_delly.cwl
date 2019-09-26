@@ -41,10 +41,14 @@ outputs:
   delly_call_output:
     type: File[]
     outputSource: delly_call/output
+    secondaryFiles:
+      - .csi
 
   delly_filtered_output:
     type: File[]
     outputSource: delly_filter_somatic/output
+    secondaryFiles:
+      - .csi
 
 steps:
   delly_call:
