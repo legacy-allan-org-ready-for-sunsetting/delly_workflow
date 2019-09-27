@@ -79,7 +79,7 @@ steps:
       call_bcf_file: delly_call/output
       samples: create_tn_pair/samples_file
       outfile: 
-        valueFrom: ${ inputs.call_bcf_file.basename.replace(".bcf", ".filtered.bcf"); }
+        valueFrom: ${ return inputs.call_bcf_file.basename.replace(".bcf", ".filtered.bcf"); }
     out: [ output ]
     scatter: [ call_bcf_file ]
     scatterMethod: dotproduct
